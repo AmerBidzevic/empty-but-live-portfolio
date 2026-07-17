@@ -5,3 +5,5 @@ A minimal live foundation for my developer portfolio, created for the FlyRank â€
 ## Live page
 
 https://amerbidzevic.github.io/empty-but-live-portfolio/
+
+The site is published automatically from the `main` branch.
