@@ -11,7 +11,7 @@ https://amerbidzevic.github.io/empty-but-live-portfolio/
 - Home, Work, About and Contact pages.
 - Four reachable project case studies.
 - Real project screenshots and a real profile photograph.
-- Downloadable CV and working contact links.
+- Downloadable CV, working contact links, and a Google Calendar booking page.
 - A public, honest “still ugly” list in `build-notes.html`.
 - Responsive layout, keyboard focus styles and semantic page structure.
 
