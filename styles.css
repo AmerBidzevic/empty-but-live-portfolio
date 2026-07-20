@@ -47,6 +47,11 @@ a:hover {
   color: var(--orange);
 }
 
+a,
+button {
+  touch-action: manipulation;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--orange);
@@ -117,7 +122,9 @@ main {
 }
 
 .site-nav a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   padding: 0.55rem 0.75rem;
   border-radius: 999px;
   color: var(--ink);
@@ -323,6 +330,7 @@ p {
 
 .text-link {
   font-weight: 750;
+  overflow-wrap: anywhere;
 }
 
 .page-intro {
@@ -538,6 +546,12 @@ figcaption {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.site-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }
 
 @media (max-width: 800px) {
