@@ -259,6 +259,10 @@ p {
   gap: 1rem;
 }
 
+.project-grid {
+  align-items: start;
+}
+
 .project-card,
 .fact-card,
 .note-card {
@@ -276,10 +280,8 @@ p {
 
 .project-card img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: auto;
   border-bottom: 1px solid var(--line);
-  background: #eef1ef;
-  object-fit: contain;
 }
 
 .project-copy,
@@ -451,11 +453,9 @@ figcaption {
 .portrait {
   width: 100%;
   max-width: 23rem;
-  aspect-ratio: 4 / 5;
+  height: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  object-fit: cover;
-  object-position: center top;
 }
 
 .timeline {
