@@ -19,15 +19,50 @@
     <header class="page-intro">
       <p class="eyebrow">Contact</p>
       <h1>Let’s talk about the work.</h1>
-      <p class="lede">If you are hiring for a junior full-stack or software-development role and want to discuss one of these projects, email me.</p>
+      <p class="lede">If you are hiring for a junior full-stack or software-development role and want to discuss one of these projects, send me a message.</p>
     </header>
 
     <div class="contact-grid">
-      <section class="contact-primary" aria-labelledby="email-title">
+      <section class="contact-primary" aria-labelledby="form-title">
         <p class="eyebrow" style="color:#bce8e4">Primary action</p>
-        <h2 id="email-title">Email me about an opportunity.</h2>
-        <p>Include the role, company and what caught your attention. I can then respond with the most relevant project context.</p>
-        <div class="actions"><a class="button" href="mailto:bdzamer@gmail.com">bdzamer@gmail.com</a><a class="button secondary" href="https://calendar.app.google/TewZx4fayXFsUrtU9">Book a 15-minute intro call</a></div>
+        <h2 id="form-title">Send me a message.</h2>
+        <p>Include the role, company and what caught your attention. The form sends the message directly to my inbox.</p>
+
+        <form class="contact-form" action="https://formsubmit.co/bdzamer@gmail.com" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="New portfolio contact">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://amerbidzevic.github.io/empty-but-live-portfolio/thanks.html">
+          <input type="hidden" name="_url" value="https://amerbidzevic.github.io/empty-but-live-portfolio/contact.html">
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          </div>
+
+          <div class="form-field">
+            <label for="company">Company or organisation <span>(optional)</span></label>
+            <input id="company" name="company" type="text" autocomplete="organization" maxlength="120">
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="7" maxlength="2000" required></textarea>
+          </div>
+
+          <button class="button" type="submit">Send message</button>
+          <p class="form-note">FormSubmit processes the message and forwards it to my email. Please do not include sensitive information.</p>
+        </form>
+
+        <p class="contact-fallback">Prefer email? <a href="mailto:bdzamer@gmail.com">Write to bdzamer@gmail.com</a>.</p>
       </section>
 
       <aside class="note-card">
@@ -36,6 +71,7 @@
         <p><a class="text-link" href="https://github.com/AmerBidzevic">GitHub →</a><br>Repositories and project history.</p>
         <p><a class="text-link" href="https://www.linkedin.com/in/amer-bidzevic-8a1655271/">LinkedIn →</a><br>Professional profile and experience.</p>
         <p><a class="text-link" href="./assets/Amer_Bidzevic_CV.pdf">Download CV →</a><br>A concise overview of education and work.</p>
+        <p><a class="text-link" href="https://calendar.app.google/TewZx4fayXFsUrtU9">Book a 15-minute intro call →</a><br>Choose a suitable time through Google Calendar.</p>
       </aside>
     </div>
   </main>

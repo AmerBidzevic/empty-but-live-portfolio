@@ -518,6 +518,70 @@ figcaption {
   background: var(--paper);
 }
 
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: 700;
+}
+
+.form-field label span,
+.form-note,
+.contact-fallback {
+  color: #bce8e4;
+  font-size: 0.86rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem;
+  border: 2px solid transparent;
+  border-radius: 0.55rem;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+
+.form-field textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--orange);
+  outline: 3px solid rgb(217 144 40 / 35%);
+  outline-offset: 2px;
+}
+
+.form-honeypot {
+  display: none;
+}
+
+.contact-form .button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.form-note,
+.contact-fallback {
+  margin-bottom: 0;
+}
+
+.contact-fallback {
+  margin-top: 1.5rem;
+}
+
 .checklist {
   margin: 0;
   padding-left: 1.2rem;

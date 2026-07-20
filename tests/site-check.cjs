@@ -15,6 +15,27 @@ function walk(directory) {
 const pages = walk(root).filter((file) => file.endsWith(".html"));
 const errors = [];
 
+const contactHtml = fs.readFileSync(path.join(root, "contact.html"), "utf8");
+
+if (!contactHtml.includes('action="https://formsubmit.co/bdzamer@gmail.com"')) {
+  errors.push("contact.html: missing FormSubmit backend action");
+}
+
+for (const field of ["name", "email", "message"]) {
+  const requiredField = new RegExp(`<(?:input|textarea)[^>]*name="${field}"[^>]*required`);
+  if (!requiredField.test(contactHtml)) {
+    errors.push(`contact.html: ${field} must be required`);
+  }
+}
+
+if (!contactHtml.includes('name="_honey"')) {
+  errors.push("contact.html: missing spam honeypot");
+}
+
+if (!contactHtml.includes('name="_next" value="https://amerbidzevic.github.io/empty-but-live-portfolio/thanks.html"')) {
+  errors.push("contact.html: missing live success redirect");
+}
+
 for (const page of pages) {
   const html = fs.readFileSync(page, "utf8");
   const relativePage = path.relative(root, page);
