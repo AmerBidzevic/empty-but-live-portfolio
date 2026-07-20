@@ -17,7 +17,7 @@ const errors = [];
 
 const contactHtml = fs.readFileSync(path.join(root, "contact.html"), "utf8");
 
-if (!contactHtml.includes('action="https://formsubmit.co/bdzamer@gmail.com"')) {
+if (!contactHtml.includes('action="https://formsubmit.co/amer.bidz@gmail.com"')) {
   errors.push("contact.html: missing FormSubmit backend action");
 }
 
