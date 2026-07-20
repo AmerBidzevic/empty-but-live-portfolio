@@ -371,6 +371,18 @@ p {
   color: var(--muted);
 }
 
+.availability {
+  margin: 1rem 0;
+  padding: 0.75rem 0;
+  border-block: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.availability strong {
+  color: var(--ink);
+}
+
 .case-hero {
   max-width: 58rem;
   margin-bottom: 4rem;
