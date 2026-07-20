@@ -3,25 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amer Bidzevic - Portfolio Build</title>
-  <meta name="description" content="The live starting point for Amer Bidzevic's developer portfolio.">
-  <meta property="og:title" content="Amer Bidzevic - Portfolio Build">
-  <meta property="og:description" content="I turn real requirements into dependable full-stack applications.">
+  <title>Amer Bidžević — Junior Full-Stack Developer</title>
+  <meta name="description" content="Amer Bidžević builds full-stack applications across interfaces, APIs, databases and authentication.">
+  <meta property="og:title" content="Amer Bidžević — Junior Full-Stack Developer">
+  <meta property="og:description" content="Real projects, decisions and evidence across full-stack software development.">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="shell">
-    <p class="eyebrow">Portfolio build / Week 4</p>
-    <section class="intro" aria-labelledby="page-title">
-      <p class="name">Amer Bidzevic</p>
-      <h1 id="page-title">I turn real requirements into dependable full-stack applications.</h1>
-      <p class="status">The structure is live. The work is being assembled.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">AB</span>Amer Bidžević</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="./index.html" aria-current="page">Home</a></li>
+        <li><a href="./work.html">Work</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Junior full-stack developer · Sarajevo</p>
+        <h1 id="hero-title">I turn real requirements into dependable full-stack applications.</h1>
+        <p class="lede">I work across interfaces, APIs, databases and authentication, then show the decisions and evidence behind the build.</p>
+        <div class="actions">
+          <a class="button" href="./work.html">See my work</a>
+          <a class="button secondary" href="./assets/Amer_Bidzevic_CV.pdf">Download CV</a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="Current direction">
+        <p class="eyebrow">Current direction</p>
+        <p>I am growing as a full-stack software developer while going deeper into application security and backend engineering.</p>
+      </aside>
     </section>
-    <footer>
-      <span>Junior full-stack developer</span>
-      <span>Sarajevo, Bosnia and Herzegovina</span>
-    </footer>
+
+    <section class="section" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Featured proof</p>
+          <h2 id="featured-title">The work leads.</h2>
+        </div>
+        <p>These projects cover a recommendation system, a company internship build, a documented backend API and a working habit application. Each case separates what I built, what I decided and what actually works.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="./assets/portfolio-homepage.png" alt="Earlier portfolio interface showing the PickMyFlick recommendation process" width="1440" height="1000">
+          <div class="project-copy">
+            <ul class="meta"><li>Lead case</li><li>Full stack</li><li>Machine learning</li></ul>
+            <h3>PickMyFlick</h3>
+            <p>A hybrid movie recommender built around a Flask API, React interface, PostgreSQL data and an offline comparison across 603 MovieLens users.</p>
+            <p><a class="text-link" href="./cases/pickmyflick.html">Open the case study →</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="./assets/task-api-swagger.png" alt="Swagger documentation showing task API endpoints" width="1280" height="720">
+          <div class="project-copy">
+            <ul class="meta"><li>Backend</li><li>REST API</li><li>Tests</li></ul>
+            <h3>Task API</h3>
+            <p>A focused backend project with CRUD behavior, validation, persistent storage, authentication work, tests and usable API documentation.</p>
+            <p><a class="text-link" href="./cases/task-api.html">Open the case study →</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="proof-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">What I can discuss</p>
+          <h2 id="proof-title">Decisions, not skill lists.</h2>
+        </div>
+        <p>I would rather explain why a system was structured a certain way than stack technology names without context.</p>
+      </div>
+      <div class="fact-grid">
+        <article class="fact-card"><h3>Interfaces</h3><p>React and React Native flows shaped around what different users actually need to do.</p></article>
+        <article class="fact-card"><h3>APIs and data</h3><p>REST endpoints, validation, relational storage, migrations and documented behavior.</p></article>
+        <article class="fact-card"><h3>Authentication</h3><p>Sessions, JWTs, MFA, recovery, rate limits and the trust boundaries around them.</p></article>
+        <article class="fact-card"><h3>Evaluation</h3><p>Tests and measured comparisons where a result can honestly be quantified.</p></article>
+      </div>
+      <div class="actions"><a class="button" href="./work.html">View all four cases</a></div>
+    </section>
+
+    <section class="section" aria-labelledby="about-teaser-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A little context</p>
+          <h2 id="about-teaser-title">Built in Sarajevo, across the stack.</h2>
+        </div>
+        <div>
+          <p>I am an Information Technology graduate who likes following a feature through the interface, API and database instead of treating each layer as someone else’s problem.</p>
+          <p><a class="text-link" href="./about.html">More about how I work →</a></p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>Amer Bidžević · Sarajevo, Bosnia and Herzegovina</p>
+    <nav aria-label="Footer navigation"><a href="./build-notes.html">Build notes</a><a href="https://github.com/AmerBidzevic">GitHub</a><a href="./contact.html">Contact</a></nav>
+  </footer>
 </body>
 </html>

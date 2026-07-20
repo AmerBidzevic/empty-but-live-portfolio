@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GrowLoop Case Study — Amer Bidžević</title>
+  <meta name="description" content="A habit application with routines, progression, analytics and layered backend architecture.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark">AB</span>Amer Bidžević</a>
+    <nav class="site-nav" aria-label="Main navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../work.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </header>
+
+  <main id="main">
+    <header class="case-hero">
+      <p class="breadcrumb"><a href="../work.html">Work</a> / GrowLoop</p>
+      <p class="eyebrow">Case 04 · Supporting application</p>
+      <h1>A habit loop connected to real application state.</h1>
+      <p class="lede">GrowLoop turns routines, completions and progress into a working web application rather than a set of disconnected interface mockups.</p>
+      <p class="case-meta">Python · REST API · SQLite · HTML/CSS/JavaScript · Render</p>
+    </header>
+
+    <figure class="case-image">
+      <img src="../assets/growloop-interface.png" alt="GrowLoop login and registration interface" width="1440" height="1000">
+      <figcaption>The real login and registration entry point used by the application.</figcaption>
+    </figure>
+
+    <div class="case-layout">
+      <aside class="case-index">
+        <p>My role</p><strong>Application contributor</strong>
+        <p>Outcome</p><strong>Working habit API, interface and persistent data model</strong>
+        <p>Repository</p><a class="text-link" href="https://github.com/AmerBidzevic/GrowLoop">View source →</a>
+      </aside>
+
+      <article class="case-content">
+        <section><h2>The problem</h2><p>A habit tracker needs more than a checkbox. Users need a clear daily loop, a record of what they completed and enough feedback to understand progress without turning the interface into a game they cannot control.</p></section>
+
+        <section><h2>What the team built</h2><p>GrowLoop supports registration and login, onboarding, habit CRUD, pause and resume, completion history, XP, streaks, levels, achievements, analytics, notification preferences and recommendation logic.</p><p>The frontend talks to a Python REST API backed by SQLite. Server-side session tokens protect logged-in calls, and passwords are stored as PBKDF2 hashes.</p></section>
+
+        <section><h2>The structural decisions</h2><p>The project separates API routes, services, repository access and persistent storage. Database queries stay inside the repository instead of spreading through handlers. Recommendation behavior is split into strategies for habit suggestions, burnout detection, adaptive difficulty and workload guidance.</p></section>
+
+        <section><h2>What came of it</h2><p>The release connects the entry flow shown above to actual habit, progress and analytics behavior. It includes five automated backend/API tests and deployment configuration with a persistent SQLite disk path.</p></section>
+
+        <div class="evidence"><strong>Evidence</strong>Authentication · habit CRUD · completion history · XP and streaks · analytics · recommendation strategies · 5 automated API tests</div>
+
+        <section style="margin-top:3rem"><h2>What I would improve</h2><p>The case needs clearer ownership notes for individual team contributions and screenshots beyond the entry flow. The recommendation rules also need user testing before being described as genuinely helpful rather than simply implemented.</p></section>
+
+        <div class="actions"><a class="button" href="../contact.html">Discuss this kind of work</a><a class="button secondary" href="../work.html">Back to all work</a></div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>Amer Bidžević · GrowLoop case study</p><nav aria-label="Footer navigation"><a href="../work.html">Work</a><a href="../contact.html">Contact</a></nav></footer>
+</body>
+</html>

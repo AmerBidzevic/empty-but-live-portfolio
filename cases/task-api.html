@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authenticated Task API Case Study — Amer Bidžević</title>
+  <meta name="description" content="A documented Node.js API with SQL persistence, Supabase authentication, tests and Docker support.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-mark">AB</span>Amer Bidžević</a>
+    <nav class="site-nav" aria-label="Main navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../work.html" aria-current="page">Work</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></nav>
+  </header>
+
+  <main id="main">
+    <header class="case-hero">
+      <p class="breadcrumb"><a href="../work.html">Work</a> / Task API</p>
+      <p class="eyebrow">Case 03 · Backend engineering</p>
+      <h1>A small API used to prove the layers around CRUD.</h1>
+      <p class="lede">Routes are only the visible edge. The useful work is in validation, storage boundaries, authentication, documentation and repeatable tests.</p>
+      <p class="case-meta">Node.js · Express · SQLite · PostgreSQL · Supabase Auth · Docker · Swagger</p>
+    </header>
+
+    <figure class="case-image">
+      <img src="../assets/task-api-swagger.png" alt="Swagger UI listing documented task API endpoints" width="1280" height="720">
+      <figcaption>Real Swagger UI from the project. The documentation exposes the behavior instead of making a reviewer read route files first.</figcaption>
+    </figure>
+
+    <div class="case-layout">
+      <aside class="case-index">
+        <p>My role</p><strong>Backend developer</strong>
+        <p>Outcome</p><strong>Authenticated, documented and tested API with interchangeable storage</strong>
+        <p>Repository</p><a class="text-link" href="https://github.com/AmerBidzevic/be-01-task-api/tree/agent/containerize-task-api">View source →</a>
+      </aside>
+
+      <article class="case-content">
+        <section><h2>The problem</h2><p>A simple task API can become a pile of route handlers very quickly. I needed a structure that could move from memory to SQLite and PostgreSQL without rewriting the service behavior, then add authentication without mixing token checks into each handler.</p></section>
+
+        <section><h2>What I built</h2><p>The API supports task CRUD, filtering, search, statistics and reset behavior. Routes call a service, and the service depends on repositories with the same interface. SQLite is the simple local default; PostgreSQL runs in the Docker Compose stack.</p><p>I added Supabase signup, login and logout, reusable bearer-token middleware, public and protected routes, Swagger bearer authorization and rate limits around credential endpoints.</p></section>
+
+        <section><h2>The main decisions</h2><p>Storage selection happens at the application boundary, so the routes and service do not change when the database changes. SQL values use parameters instead of string concatenation. The authentication middleware strictly parses one bearer format and verifies the token with Supabase before returning limited user information.</p></section>
+
+        <section><h2>What came of it</h2><p>The same project now demonstrates API behavior, SQL persistence, containerized PostgreSQL and a real authentication provider. The final automated suite contains 22 passing tests, and the Supabase flow was also checked with a real test account, valid and tampered JWTs, protected routes and logout.</p></section>
+
+        <div class="evidence"><strong>Evidence</strong>22 automated tests · SQLite restart persistence · PostgreSQL Compose stack · Swagger documentation · live Supabase token verification</div>
+
+        <section style="margin-top:3rem"><h2>What I would improve</h2><p>Task ownership is not yet enforced on the CRUD routes, so this is not presented as a multi-user production service. The next security step would connect each task to an authenticated owner and add authorization tests for cross-user access.</p></section>
+
+        <div class="actions"><a class="button" href="../contact.html">Discuss this kind of work</a><a class="button secondary" href="../work.html">Back to all work</a></div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>Amer Bidžević · Task API case study</p><nav aria-label="Footer navigation"><a href="../work.html">Work</a><a href="../contact.html">Contact</a></nav></footer>
+</body>
+</html>
