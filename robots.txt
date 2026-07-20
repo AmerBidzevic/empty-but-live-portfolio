@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amerbidzevic.github.io/empty-but-live-portfolio/sitemap.xml

@@ -32,6 +32,14 @@ if (!contactHtml.includes('name="_honey"')) {
   errors.push("contact.html: missing spam honeypot");
 }
 
+if (!contactHtml.includes('data-contact-form') || !contactHtml.includes('src="./site.js"')) {
+  errors.push("contact.html: missing duplicate-submission guard");
+}
+
+if (!contactHtml.includes('name="name" type="text" autocomplete="name" minlength="2"') || !contactHtml.includes('name="message" rows="7" minlength="10"')) {
+  errors.push("contact.html: missing basic garbage-input constraints");
+}
+
 if (!contactHtml.includes('name="_next" value="https://amerbidzevic.github.io/empty-but-live-portfolio/thanks.html"')) {
   errors.push("contact.html: missing live success redirect");
 }
@@ -56,6 +64,20 @@ for (const page of pages) {
     errors.push(`${relativePage}: missing page title`);
   }
 
+  if (!/<meta name="description" content="[^"]+">/.test(html)) {
+    errors.push(`${relativePage}: missing meta description`);
+  }
+
+  if (!/<link rel="canonical" href="https:\/\/amerbidzevic\.github\.io\/empty-but-live-portfolio\/[^"]*">/.test(html)) {
+    errors.push(`${relativePage}: missing canonical URL`);
+  }
+
+  for (const property of ["og:title", "og:description", "og:type", "og:url", "og:image"]) {
+    if (!html.includes(`<meta property="${property}"`)) {
+      errors.push(`${relativePage}: missing ${property}`);
+    }
+  }
+
   if (/lorem ipsum|placeholder text|Ã|â€/.test(html)) {
     errors.push(`${relativePage}: contains placeholder or broken encoding`);
   }
@@ -73,6 +95,12 @@ for (const page of pages) {
     if (!fs.existsSync(resolved)) {
       errors.push(`${relativePage}: missing local target ${target}`);
     }
+  }
+}
+
+for (const requiredFile of ["robots.txt", "sitemap.xml", "site.js", "break-test-log.md"]) {
+  if (!fs.existsSync(path.join(root, requiredFile))) {
+    errors.push(`missing required hardening artifact ${requiredFile}`);
   }
 }
 

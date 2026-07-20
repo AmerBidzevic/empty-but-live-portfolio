@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — Amer Bidžević</title>
   <meta name="description" content="Contact Amer Bidžević about a junior full-stack or software-development opportunity.">
+  <link rel="canonical" href="https://amerbidzevic.github.io/empty-but-live-portfolio/contact.html">
+  <meta property="og:title" content="Contact — Amer Bidžević">
+  <meta property="og:description" content="Contact Amer Bidžević about a junior full-stack or software-development opportunity.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amerbidzevic.github.io/empty-but-live-portfolio/contact.html">
+  <meta property="og:image" content="https://amerbidzevic.github.io/empty-but-live-portfolio/assets/portfolio-homepage.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -28,7 +35,7 @@
         <h2 id="form-title">Send me a message.</h2>
         <p>Include the role, company and what caught your attention. The form sends the message directly to my inbox.</p>
 
-        <form class="contact-form" action="https://formsubmit.co/amer.bidz@gmail.com" method="POST" accept-charset="UTF-8">
+        <form class="contact-form" action="https://formsubmit.co/amer.bidz@gmail.com" method="POST" accept-charset="UTF-8" data-contact-form>
           <input type="hidden" name="_subject" value="New portfolio contact">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://amerbidzevic.github.io/empty-but-live-portfolio/thanks.html">
@@ -40,7 +47,7 @@
 
           <div class="form-field">
             <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" pattern=".*[A-Za-zÀ-ž].*" title="Enter a name containing at least one letter" required>
           </div>
 
           <div class="form-field">
@@ -55,7 +62,7 @@
 
           <div class="form-field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="7" maxlength="2000" required></textarea>
+            <textarea id="message" name="message" rows="7" minlength="10" maxlength="2000" required></textarea>
           </div>
 
           <button class="button" type="submit">Send message</button>
@@ -77,5 +84,6 @@
   </main>
 
   <footer class="site-footer"><p>Amer Bidžević · Open to relevant junior opportunities</p><nav aria-label="Footer navigation"><a href="./work.html">Work</a><a href="./build-notes.html">Build notes</a></nav></footer>
+  <script src="./site.js" defer></script>
 </body>
 </html>
