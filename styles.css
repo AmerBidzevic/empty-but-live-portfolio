@@ -276,10 +276,10 @@ p {
 
 .project-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   border-bottom: 1px solid var(--line);
-  object-fit: cover;
-  object-position: top;
+  background: #eef1ef;
+  object-fit: contain;
 }
 
 .project-copy,
@@ -450,9 +450,12 @@ figcaption {
 
 .portrait {
   width: 100%;
-  max-width: 28rem;
+  max-width: 23rem;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  object-fit: cover;
+  object-position: center top;
 }
 
 .timeline {
